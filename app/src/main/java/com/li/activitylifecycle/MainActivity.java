@@ -28,9 +28,15 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "onClick: ");
                 Intent intent = new Intent(MainActivity.this, ActivitySecond.class);
                 intent.putExtra(BOOK_NAME_OF_CATEGORY_PHYSICAL, editText.getText().toString());
-                startActivity(intent);
+                startActivityForResult(intent, 0);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        String name = data.getStringExtra("back");
+        Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
     }
 
     @Override
