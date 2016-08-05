@@ -11,88 +11,58 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
-    public static final String BOOK_NAME_OF_CATEGORY_PHYSICAL = "bookNameOfCategoryPhysical";
     private Button mButton;
-    private EditText mEditText;
-    private Button mThirdButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.d(TAG, "onCreate: ");
+        Log.d(TAG, "徐咏梅测试onCreate:执行了！ ");
         mButton = (Button) findViewById(R.id.activity_main_button);
-        mEditText = (EditText) findViewById(R.id.activity_main_edit_text);
-
 
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Log.d(TAG, "onClick: ");
-                Intent intent = new Intent(MainActivity.this, ActivitySecond.class);
-                intent.putExtra(BOOK_NAME_OF_CATEGORY_PHYSICAL, mEditText.getText().toString());
-                startActivityForResult(intent, 0);
+                Log.d(TAG, "徐咏梅测试onClick:执行了！ ");
             }
         });
-
-        mThirdButton = (Button) findViewById(R.id.activity_main_third_button);
-        mThirdButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
-                startActivityForResult(intent, 1);
-            }
-        });
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        String name = "";
-        switch (requestCode) {
-            case 0:
-                name = data.getStringExtra("back");
-                break;
-            case 1:
-                name = data.getStringExtra("backThird");
-        }
-        Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
 
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG, "onStart: ");
+        Log.d(TAG, "徐咏梅测试onStart:执行了！ ");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG, "onResume: ");
+        Log.d(TAG, "徐咏梅测试onResume:执行了！ ");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG, "onPause: ");
+        Log.d(TAG, "徐咏梅测试onPause:执行了！ ");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG, "onStop: ");
+        Log.d(TAG, "徐咏梅测试onStop:执行了！ ");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "onDestroy: ");
+        Log.d(TAG, "徐咏梅测试onDestroy:执行了！ ");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d(TAG, "onRestart: ");
+        Log.d(TAG, "徐咏梅测试onRestart:执行了！ ");
     }
 }

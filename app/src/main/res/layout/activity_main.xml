@@ -14,15 +14,6 @@
         android:id="@+id/activity_main_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="启动第二个Activity"
+        android:text="启动Activity"
         android:textAllCaps="false"/>
-    <EditText
-        android:id="@+id/activity_main_edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <Button
-        android:id="@+id/activity_main_third_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Start Third"/>
 </LinearLayout>
